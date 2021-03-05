@@ -25,13 +25,14 @@ def prime (N):
 def ToBinary (N):
 	if N >= 1:
 		ToBinary (N // 2)
-		print(N % 2)
+		print(N % 2, end='')
 
 def main():
 	n = int(input("Please insert your age"))
 	fibonacciSum (n)
 	prime (n)
 	ToBinary (n)
+	print('\n')
 	print("Have a nice day")
 
 main()
