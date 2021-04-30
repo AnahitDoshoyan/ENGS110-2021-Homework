@@ -75,8 +75,45 @@ def main():
 			book = addBook()
 			books.append(book)
 
-	print("Saving to teh file")
+	print("Saving to the file")
 	saveToTheFile(books)
 	displayAllBooks(books)
 
-main()
+    break
+ 47                 else:
+ 48                         book["chapters"].append(chapter)
+ 49 
+ 50         return book
+ 51 
+ 52 def loadExistingBooks():
+ 53         with open('books.json') as file_data:
+ 54                 print(file_data)
+ 55                 books = json.load(file_data)
+ 56                 return books
+ 57 
+ 58 def saveToTheFile(books):
+ 59         f = open("books.json", "w")
+ 60         print(books)
+ 61         f.write(json.dumps(books, indent=2))
+ 62         f.close()
+ 63 
+ 64 def main():
+ 65         books = []
+ 66 
+ 67         books = loadExistingBooks()
+ 68 
+ 69         while(True):
+ 70                 insert_mode = input("Do you want to start adding books?, please answer yes or no")
+ 71                 if(insert_mode == "no"):
+ 72                         print("Goodbye")
+ 73                         break
+ 74                 else:
+ 75                         book = addBook()
+ 76                         books.append(book)
+ 77 
+ 78         print("Saving to the file")
+ 79         saveToTheFile(books)
+ 80         displayAllBooks(books)
+ 81 
+ 82 main()                                                                                                                                                                        
+                                      main()

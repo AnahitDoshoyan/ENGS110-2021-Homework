@@ -1,0 +1,35 @@
+[
+  {
+    "title": "asd",
+    "num_of_pages": 123,
+    "language": "asd",
+    "author": "sdf",
+    "publishing_year": 234,
+    "last_time_read": {
+      "day": 21,
+      "month": "March",
+      "year": 2021
+    },
+    "chapters": [
+      "asd",
+      "sdfsd"
+    ]
+  },
+  {
+    "title": "sdasdasd",
+    "num_of_pages": 234,
+    "language": "sdfsdf",
+    "author": "234",
+    "publishing_year": 345,
+    "last_time_read": {
+      "day": 21,
+      "month": "Feb",
+      "year": 2001
+    },
+    "chapters": [
+      "aasd",
+      "fsf",
+      "dfs"
+    ]
+  }
+]
