@@ -1,0 +1,125 @@
+Steps to submit:
+Please answer to all questions below and submit the document with all the answers in github (can be a .txt file)
+Deadline: Sunday, Aug 29th, 23:59
+
+
+1. Possible values set to store in 'char'
+Answer: char => 1 byte => -128 to 127
+ASCII vs. Unicode: https://www.youtube.com/watch?v=I-pQH_krD0M&t=1s
+--------------------------------------------------------------------------------------------------------------------
+2. What will print the following code?
+#include <stdio.h>
+int main()
+{
+    int a = 5;
+    while (a-- > 0) {
+        printf("%d\n", a);
+    }
+    return 0;
+}
+It will print 
+4
+3
+2
+1
+0
+--------------------------------------------------------------------------------------------------------------------
+3. Can a C program be compiled or executed in the absence of a main()? C program cannot run without a main() --------------------------------------------------------------------------------------------------------------------
+4. Can I declare the same variable name to the variables which have different
+scopes?
+
+void function1()
+{
+   int variable = 0;
+}
+void function()
+{
+   int variable = 5;
+} We cannot use the same variable name to the variables with different scopes. --------------------------------------------------------------------------------------------------------------------
+5. What will print the following code?
+#include <stdio.h>
+
+void increment(int* i)
+{
+    *i = *i + 1;
+}
+int main()
+{
+    int count = 7;
+    increment(&count);
+    printf("%d\n", count);
+    return 0;
+} Without #include <stdio.h>, it would result 8 with warnings, but with printf declaration, just 8 will be printed. --------------------------------------------------------------------------------------------------------------------
+6. What will print the following program?
+#include <stdio.h>
+int main()
+{
+    int x = 5641;
+    if (x & 1) {
+        printf("Even\n");
+    } else {
+        printf("Odd\n");
+    }
+    return 0;
+}
+The result will be ‘Even’. --------------------------------------------------------------------------------------------------------------------
+7. What will print the following program, if the sizeof(int) is equal 4?
+#include <stdio.h>
+
+int main()
+{
+    int x[5];
+    printf("sizeof(int)=%ld, sizeof(x)=%ld", sizeof(int), sizeof(x));
+    return 0;
+} With #include <stdio.h> the result is sizeof(x)=20. --------------------------------------------------------------------------------------------------------------------
+8. What will print the following program, if as array size '7' is provided?
+#includ <sdio.h>
+
+int main()
+{
+    int s = 0;
+    printf("Enter array size: ");
+    scanf("%d", &s);
+    int* a = new int[s];
+    for (int i = 0; i < s; ++i) {
+        a[i] = i;
+    }
+    for (int i = 0; i < s; ++i) {
+        printf("%d\n", a[i]);
+    }
+    delete [] a;
+    return 0;
+}
+
+With printf and scanf declaration the result will be 
+0
+1
+2
+3
+4
+5
+6 --------------------------------------------------------------------------------------------------------------------
+9. What will print the following program?
+#includ <sdio.h>
+
+struct point
+{
+    int x;
+    int y;
+};
+int main()
+{
+    struct point p = {4, 5};
+    printf("x=%d, y=%d\n", p.x, p.y);
+    return 0;
+} The result is x=4, x=5 --------------------------------------------------------------------------------------------------------------------
+10. Can the union elements be of different sizes?
+union data
+{
+    char c;
+    int i;
+};
+
+Yes, in C it union elements can be of different sizes as well as of different types. 
+
+
